@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>first-portfolio</title>
+
+        <!-- <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script src="./assets/js/lottie.min.js"></script>
+        <script src="./assets/js/jquery-3.6.0.min.js"></script>
+        <script src="./assets/js/detectmobilebrowser.js"></script>
+        <script src="./assets/js/lenis.min.js"></script>
+        <script src="./assets/js/moment.js"></script>
+        <script src="./assets/js/common.js"></script> -->
+        <!-- css -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <link rel="stylesheet" media="all" href="./assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" media="all" href="./assets/css/common.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="./assets/js/comm.js"></script>
+    </head>
+    <body>
+        <div id="u-skip">
+            <a href="#gnb">전체메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
+        </div>
+        <div id="wrap">
+            <header id="header">
+                <div class="header-menu">
+                    <div class="menu-box">
+                        <a href="#" class="btn-menu active">지점 안내</a>
+                        <a href="#" class="btn-menu">단체 안내</a>
+                        <a href="#" class="btn-menu">동물 정보</a>
+                        <a href="#" class="btn-menu">이벤트 및 뉴스</a>
+                    </div>
+                </div>
+                <h1 id="logo">
+                    <a href="/">
+                        <img src="./images/logo-color.png" alt="zoolungzoolung" />
+                    </a>
+                </h1>
+                <a href="#" class="btn-mobile mobile"><i class="las la-bars"></i></a>
+                <div class="util">
+                    <div class="log-in"></div>
+                    <div class="search-area">
+                        <button class="btn-search">
+                            <span class="blind">검색창 열기</span>
+                        </button>
+                        <div class="layer-search">
+                            <form action="">
+                                <input type="search" name="search" id="search" placeholder="검색어를 입력하세요" />
+                                <button type="submit">검색</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="lang"></div>
+                </div>
+            </header>
+            <div id="content" class="content-overview">
+                <div class="content-wrap overview-top">
+                    <div class="top-text">
+                        <div class="logo">
+                            <img src="./images/logo-orange.svg" alt="주렁주렁" />
+                        </div>
+                        <h2 class="title">
+                            삭막한
+                            <br class="mobile" />도시 한가운데 <br />생명의 숲
+                        </h2>
+                        <h3 class="stitle">
+                            가까이 보면 더 새로운 세상
+                            <br class="mobile" />따뜻한 교감을 통해 공존의 의미를 느껴보세요.
+                        </h3>
+                    </div>
+                    <div class="obj-ticket">
+                        <img src="./images/ticket.png" alt="ticket" />
+                    </div>
+                    <div class="top-obj">
+                        <div class="obj t1">
+                            <img src="./images/top_line.svg" alt="img" class="line" />
+                        </div>
+                        <div class="obj l1">
+                            <img src="./images/animal-04.jpg" alt="img" class="img" />
+                            <img src="./images/animal-02.png" alt="img" class="icon" />
+                        </div>
+                        <div class="obj r1">
+                            <img src="./images/animal-03.jpg" alt="img" class="img" />
+                        </div>
+                        <div class="obj l2">
+                            <img src="./images/animal-06.jpg" alt="img" class="img" />
+                        </div>
+                        <div class="obj r2">
+                            <img src="./images/animal-05.jpg" alt="img" class="img" />
+                        </div>
+                        <div class="obj l3">
+                            <img src="./images/animal-07.jpg" alt="img" class="img" />
+                            <img src="./images/animal-01.png" alt="img" class="icon" />
+                        </div>
+                        <div class="obj r3">
+                            <img src="./images/animal-08.jpg" alt="img" class="img" />
+                            <img src="./images/drawing-01.png" alt="img" class="flower" />
+                        </div>
+                        <div class="obj l4">
+                            <img src="./images/animal-09.jpg" alt="img" class="img" />
+                        </div>
+                        <div class="obj r4">
+                            <img src="./images/drawing-02.png" alt="img" class="img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="content-wrap overview-expand">
+                    <div class="expand-wrap">
+                        <div class="expand-bg"></div>
+                        <h3 class="title">
+                            울타리 없는 교감,
+                            <br class="mobile" />도심 속 생명의 숲
+                        </h3>
+                    </div>
+                </div>
+                <div class="content-wrap overview-phone">
+                    <div class="phone-wrap">
+                        <div class="text-box">
+                            <p class="title-sub">Real Instagram Review</p>
+                            <div class="title-box">
+                                <h3 class="title">
+                                    <span class="word color-o">주렁주렁</span>
+                                    <br />
+                                    <span class="word">방문자들의 리얼</span>
+                                    <br />
+                                    <span class="word">후기를 둘러보세요.</span>
+                                </h3>
+                            </div>
+
+                            <div class="btn-review">
+                                <h3 class="review-txt">더 많은 리뷰 보기</h3>
+                            </div>
+                        </div>
+                        <div class="phone-case">
+                            <img src="./images/phone.svg" alt="img" />
+                            <div class="content-insta">
+                                <ul class="box-01">
+                                    <li class="title-name">wzoolungzoolung</li>
+                                    <li class="insta-img"><img src="./images/insta-01.jpg" alt="img" /></li>
+                                    <li class="icon-box">
+                                        <div class="heart">
+                                            <img src="./images/heart.svg" alt="img" />
+                                        </div>
+                                        <div class="chet">
+                                            <img src="./images/chat.svg" alt="img" />
+                                        </div>
+                                        <div class="dm">
+                                            <img src="./images/dm.svg" alt="img" />
+                                        </div>
+                                    </li>
+                                    <li class="tag">
+                                        <div class="tag-txt">#이색데이트</div>
+                                        <div class="tag-txt">#인생샷</div>
+                                    </li>
+                                </ul>
+                                <ul class="box-02">
+                                    <li class="title-name">wzoolungzoolung</li>
+                                    <li class="insta-img"><img src="./images/insta-02.jpg" alt="img" /></li>
+                                    <li class="icon-box">
+                                        <div class="heart"></div>
+                                        <div class="chet"></div>
+                                        <div class="dm"></div>
+                                    </li>
+                                    <li class="tag">
+                                        <div class="tag-txt-01">#이색데이트</div>
+                                        <div class="tag-txt-01">#인생샷</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-sale">
+                <div class="swiper mySwiper">
+                    <div class="text-box">
+                        <span class="title">우대혜택으로 <strong>주렁주렁</strong> 가자</span>
+                        <span class="sub-tit">현재 진행 중인 할인혜택을 알아보세요.</span>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box-tr">
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-01.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">재방문 30%할인</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-02.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">16개월 미만 영유아 무료입장</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-03.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">18개월~36개월 이하 영유아 30%</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-04.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">다자녀 가구 우대</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-tr">
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-05.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">65세 이상 어르신 30%할인</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-06.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">장애인 30%할인</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-07.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">국가유공자 30%할인</span>
+                                    </a>
+                                </div>
+                                <div class="box-td">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="./images/sale-08.png" alt="" />
+                                        </span>
+                                        <span class="txt">연간혜택</span>
+                                        <span class="tit">버거킹 구매고객 20%할인</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="btn-review">
+                        <h3 class="review-txt">더 많은 혜택 보기</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="content-news-datatalk">
+                <div class="container">
+                    <span class="top-text">생명의 숲 <br /><strong>주렁주렁</strong> News </span>
+                    <p class="bottom-text">주렁주렁 동물 친구들 소식</p>
+                </div>
+                <div class="datatalk-list">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-01.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">데칼코마니처럼 똑 닮은 동물들</p>
+                                    <p class="talkpick">
+                                        <span>사막여우</span>
+                                        <span>홍금강</span>
+                                        <span>그린이구아나</span>
+                                    </p>
+                                    <p class="date">2021.05.26</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-02.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">주렁주렁 동물들의 맘마타임</p>
+                                    <p class="talkpick">
+                                        <span>안락 꼬리 여우 원숭이</span>
+                                        <span>프레리독</span>
+                                        <span>펌치리아</span>
+                                    </p>
+                                    <p class="date">2021.05.07</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-03.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">주렁주렁 동물 근황-춘곤증편</p>
+                                    <p class="talkpick">
+                                        <span>프레리독</span>
+                                        <span>페럿</span>
+                                        <span>서벌캣</span>
+                                    </p>
+                                    <p class="date">2021.04.29</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-04.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">서로에게 애틋한 동물들</p>
+                                    <p class="talkpick">
+                                        <span>미어캣</span>
+                                        <span>'와이'</span>
+                                        <span>'파이'</span>
+                                    </p>
+                                    <p class="date">2021.04.12</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-05.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">삼남매 콩,팥,쌀 중 둘째</p>
+                                    <p class="talkpick">
+                                        <span>라쿤</span>
+                                        <span>'팥'</span>
+                                        <span>동탄 라크몽점</span>
+                                    </p>
+                                    <p class="date">2021.05.26</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-06.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">우열을 가릴 수 없는 꽃미모</p>
+                                    <p class="talkpick">
+                                        <span>스컹크</span>
+                                        <span>희뺨투라코</span>
+                                        <span>작은발톱수달</span>
+                                    </p>
+                                    <p class="date">2021.04.12</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-03.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">주렁주렁 동물 근황-춘곤증편</p>
+                                    <p class="talkpick">
+                                        <span>프레리독</span>
+                                        <span>페럿</span>
+                                        <span>서벌캣</span>
+                                    </p>
+                                    <p class="date">2021.04.29</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <p class="image">
+                                        <img src="./images/content-04.jpg" alt="" />
+                                    </p>
+                                    <p class="tit">우열을 가릴 수 없는 꽃미모</p>
+                                    <p class="talkpick">
+                                        <span>희뺨투라코</span>
+                                        <span>작은발톱수달</span>
+                                        <span>스컹크</span>
+                                    </p>
+                                    <p class="date">2021.04.12</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-nexs">
+                <div class="container">
+                    <span class="top-text"><strong>주렁주렁</strong> 새소식</span>
+                    <span class="sub-text">더보기</span>
+                </div>
+                <div class="list-container">
+                    <div class="news-list">
+                        <div class="news-list-container">
+                            <div class="news-box">
+                                <p class="news-text">소식</p>
+                            </div>
+                            <div class="news-text-wrap">
+                                <div class="title">주렁주렁 카카오톡 선물하기 오픈!</div>
+                                <div class="date">
+                                    <i class="icon-date">2024.05.21</i>
+                                </div>
+                            </div>
+                            <i class="las la-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-list-container">
+                            <div class="news-box">
+                                <p class="news-text">소식</p>
+                            </div>
+                            <div class="news-text-wrap">
+                                <div class="title">[하남] 초대형 정글 놀이터 오픈!</div>
+                                <div class="date">
+                                    <i class="icon-date">2024.05.20</i>
+                                </div>
+                            </div>
+                            <i class="las la-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-list-container">
+                            <div class="news-box">
+                                <p class="news-text">모집</p>
+                            </div>
+                            <div class="news-text-wrap">
+                                <div class="title">주렁주렁 서포터즈 1기 모집</div>
+                                <div class="date">
+                                    <i class="icon-date">2024.05.16</i>
+                                </div>
+                            </div>
+                            <i class="las la-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-list-container">
+                            <div class="news-box">
+                                <p class="news-text">할인</p>
+                            </div>
+                            <div class="news-text-wrap">
+                                <div class="title">제부 해상 케이블카 서해랑 할인!</div>
+                                <div class="date">
+                                    <i class="icon-date">2023.08.21</i>
+                                </div>
+                            </div>
+                            <i class="las la-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-list-container">
+                            <div class="news-box">
+                                <p class="news-text">할인</p>
+                            </div>
+                            <div class="news-text-wrap">
+                                <div class="title">온더보더 스타필드 하남점 할인!</div>
+                                <div class="date">
+                                    <i class="icon-date">2022.08.17</i>
+                                </div>
+                            </div>
+                            <i class="las la-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="top-content">
+                    <div class="logo">
+                        <img src="./images/logo-color.png" alt="zoolungzoolung" />
+                    </div>
+                    <div class="content-sns">
+                        <img src="./images/icon-insta.svg" alt="icon" />
+                        <img src="./images/icon-facebook.svg" alt="icon" />
+                        <img src="./images/icon-blog.svg" alt="icon" />
+                    </div>
+                </div>
+                <div class="nav">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">문의하기</a>
+                    <a href="#">제휴문의</a>
+                </div>
+                <div class="copyright">
+                    <p>주렁주렁 서울시 마포수 성암로 189 중소기업 DMC타워 17F</p>
+                    <p>사업자등록번호 607-86-04228 / 대표전화 1644 - 2153</p>
+                    <p>Copyright ⓒ 2024 Brilly.K All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
