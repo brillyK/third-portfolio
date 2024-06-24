@@ -10,7 +10,7 @@
     left: 0;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 11000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +37,16 @@
         display: none;
     }
 }
+@media screen and (min-width: $breakpoint-md) {
+    #header {
+        padding: 0 40px;
+        #logo {
+            img {
+                width: 90px;
+            }
+        }
+    }
+}
 .content-wrap {
     position: relative;
     overflow: hidden;
@@ -46,7 +56,7 @@
 .overview-top {
     position: relative;
     height: 1200px;
-    margin-bottom: -200px;
+    // margin-bottom: -200px;
     overflow: visible;
     .top-text {
         font-size: 4.6px;
@@ -207,6 +217,121 @@
         }
     }
 }
+@media screen and (min-width: $breakpoint-md) {
+    .overview-top {
+        .top-text {
+            .logo img {
+                width: 82px;
+            }
+            .title {
+                font-size: 72px;
+                line-height: 88px;
+            }
+            .stitle {
+                font-size: 21px;
+                line-height: 26px;
+            }
+        }
+        .obj-ticket {
+            right: 40px;
+
+            img {
+                width: 149px;
+            }
+        }
+        .top-obj {
+            width: 160%;
+            margin-left: -30%;
+            .t1 {
+                .line {
+                    top: 52%;
+                    right: 35%;
+                    transform: scale(0.8);
+                }
+            }
+            .l1 {
+                transform: scale(0.8);
+            }
+            .r1 {
+                top: 2%;
+                right: 19.5%;
+                transform-origin: right center;
+                transform: scale(0.6);
+                .img {
+                    width: 231px;
+                }
+            }
+            .l2 {
+                top: 38.2%;
+                left: 24%;
+                transform-origin: left center;
+                transform: scale(0.45);
+                .img {
+                    width: 240px;
+                }
+            }
+            .r2 {
+                top: 17.5%;
+                right: 4%;
+                transform-origin: right center;
+                transform: scale(0.4);
+                .img {
+                    width: 640px;
+                }
+            }
+            .l3 {
+                top: 54.5%;
+                left: 10%;
+                transform-origin: left center;
+                transform: scale(0.45);
+                .img {
+                    width: 530px;
+                }
+                .icon {
+                    display: block;
+                    position: absolute;
+                    width: 61px;
+                    left: 45%;
+                    top: -40px;
+                }
+            }
+            .r3 {
+                top: 55.7%;
+                right: 16.3%;
+                transform-origin: right center;
+                transform: scale(0.5);
+                .img {
+                    width: 356px;
+                }
+                .flower {
+                    display: block;
+                    position: absolute;
+                    top: auto;
+                    left: -100px;
+                    bottom: -120px;
+                    width: 80px;
+                }
+            }
+            .l4 {
+                left: 18.2%;
+                top: 82.3%;
+                transform-origin: left center;
+                transform: scale(0.45);
+                .img {
+                    width: 534px;
+                }
+            }
+            .r4 {
+                top: 100.3%;
+                right: 50%;
+                margin-right: -100%;
+                transform-origin: right center;
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
 .overview-expand {
     background: transparent;
     height: 900px;
@@ -245,7 +370,7 @@
             background: url(../../images/animal-10.jpg) no-repeat center center;
             background-size: cover;
             overflow: hidden;
-            transition: all 0.9s ease;
+            transition: all 0.8s ease;
         }
 
         .title {
@@ -323,6 +448,12 @@
             left: 50%;
             transform: translate(-50%, 0);
             overflow: hidden;
+            display: block;
+            width: 300px;
+            img {
+                display: block;
+                width: 300px;
+            }
             .content-insta {
                 display: flex;
                 flex-direction: column;
@@ -335,26 +466,26 @@
                 .box-01,
                 .box-02 {
                     display: block;
-                    width: 183px;
+                    width: 235px;
                     height: auto;
                     .title-name {
                         display: flex;
                         align-items: center;
-                        font-size: 10px;
+                        font-size: 13px;
                         font-weight: 500;
                         gap: 3px;
                         &::before {
                             content: '\f16d';
                             font-family: 'Line Awesome Brands';
-                            font-size: 18px;
+                            font-size: 20px;
                         }
                     }
                     .insta-img {
                         padding-bottom: 5px;
                         img {
                             display: block;
-                            width: 183px;
-                            height: 183px;
+                            width: 235px;
+                            height: 235px;
                         }
                     }
                     .icon-box {
@@ -370,7 +501,7 @@
                         display: flex;
                         gap: 10px;
                         .tag-txt {
-                            font-size: 11px;
+                            font-size: 13px;
                             font-weight: 700;
                         }
                     }
@@ -382,7 +513,7 @@
 .content-sale {
     display: block;
     width: 100%;
-    height: 1000px;
+    height: 1030px;
     background-color: $secondary;
     .swiper {
         width: 100%;
@@ -485,7 +616,7 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: var(--swiper-pagination-bottom, 110px);
+        bottom: var(--swiper-pagination-bottom, 90px);
     }
     .btn-review {
         display: flex;
@@ -496,7 +627,7 @@
         background-color: $primary;
         border-radius: 20px;
         position: absolute;
-        bottom: 40px;
+        bottom: 10px;
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 100;
@@ -510,7 +641,7 @@
 .content-news-datatalk {
     display: block;
     width: 100%;
-    height: 2320px;
+    height: 2280px;
     background-color: $secondary;
     z-index: 1000;
     position: relative;
@@ -557,7 +688,7 @@
                 .swiper-slide {
                     position: relative;
                     height: 100%;
-                    width: 380px;
+                    width: 100%;
                     display: block;
                     a {
                         position: relative;

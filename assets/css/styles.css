@@ -273,7 +273,7 @@ legend {
   left: 0;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 11000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,6 +299,14 @@ legend {
   display: none;
 }
 
+@media screen and (min-width: 744px) {
+  #header {
+    padding: 0 40px;
+  }
+  #header #logo img {
+    width: 90px;
+  }
+}
 .content-wrap {
   position: relative;
   overflow: hidden;
@@ -309,7 +317,6 @@ legend {
 .overview-top {
   position: relative;
   height: 1200px;
-  margin-bottom: -200px;
   overflow: visible;
 }
 .overview-top .top-text {
@@ -470,6 +477,113 @@ legend {
   transform: scale(0.5);
 }
 
+@media screen and (min-width: 744px) {
+  .overview-top .top-text .logo img {
+    width: 82px;
+  }
+  .overview-top .top-text .title {
+    font-size: 72px;
+    line-height: 88px;
+  }
+  .overview-top .top-text .stitle {
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .overview-top .obj-ticket {
+    right: 40px;
+  }
+  .overview-top .obj-ticket img {
+    width: 149px;
+  }
+  .overview-top .top-obj {
+    width: 160%;
+    margin-left: -30%;
+  }
+  .overview-top .top-obj .t1 .line {
+    top: 52%;
+    right: 35%;
+    transform: scale(0.8);
+  }
+  .overview-top .top-obj .l1 {
+    transform: scale(0.8);
+  }
+  .overview-top .top-obj .r1 {
+    top: 2%;
+    right: 19.5%;
+    transform-origin: right center;
+    transform: scale(0.6);
+  }
+  .overview-top .top-obj .r1 .img {
+    width: 231px;
+  }
+  .overview-top .top-obj .l2 {
+    top: 38.2%;
+    left: 24%;
+    transform-origin: left center;
+    transform: scale(0.45);
+  }
+  .overview-top .top-obj .l2 .img {
+    width: 240px;
+  }
+  .overview-top .top-obj .r2 {
+    top: 17.5%;
+    right: 4%;
+    transform-origin: right center;
+    transform: scale(0.4);
+  }
+  .overview-top .top-obj .r2 .img {
+    width: 640px;
+  }
+  .overview-top .top-obj .l3 {
+    top: 54.5%;
+    left: 10%;
+    transform-origin: left center;
+    transform: scale(0.45);
+  }
+  .overview-top .top-obj .l3 .img {
+    width: 530px;
+  }
+  .overview-top .top-obj .l3 .icon {
+    display: block;
+    position: absolute;
+    width: 61px;
+    left: 45%;
+    top: -40px;
+  }
+  .overview-top .top-obj .r3 {
+    top: 55.7%;
+    right: 16.3%;
+    transform-origin: right center;
+    transform: scale(0.5);
+  }
+  .overview-top .top-obj .r3 .img {
+    width: 356px;
+  }
+  .overview-top .top-obj .r3 .flower {
+    display: block;
+    position: absolute;
+    top: auto;
+    left: -100px;
+    bottom: -120px;
+    width: 80px;
+  }
+  .overview-top .top-obj .l4 {
+    left: 18.2%;
+    top: 82.3%;
+    transform-origin: left center;
+    transform: scale(0.45);
+  }
+  .overview-top .top-obj .l4 .img {
+    width: 534px;
+  }
+  .overview-top .top-obj .r4 {
+    top: 100.3%;
+    right: 50%;
+    margin-right: -100%;
+    transform-origin: right center;
+    transform: scale(0.5);
+  }
+}
 .overview-expand {
   background: transparent;
   height: 900px;
@@ -507,7 +621,7 @@ legend {
   background: url(../../images/animal-10.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  transition: all 0.9s ease;
+  transition: all 0.8s ease;
 }
 .overview-expand .expand-wrap .title {
   position: absolute;
@@ -583,6 +697,12 @@ legend {
   left: 50%;
   transform: translate(-50%, 0);
   overflow: hidden;
+  display: block;
+  width: 300px;
+}
+.overview-phone .phone-wrap .phone-case img {
+  display: block;
+  width: 300px;
 }
 .overview-phone .phone-wrap .phone-case .content-insta {
   display: flex;
@@ -597,14 +717,14 @@ legend {
 .overview-phone .phone-wrap .phone-case .content-insta .box-01,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 {
   display: block;
-  width: 183px;
+  width: 235px;
   height: auto;
 }
 .overview-phone .phone-wrap .phone-case .content-insta .box-01 .title-name,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .title-name {
   display: flex;
   align-items: center;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   gap: 3px;
 }
@@ -612,7 +732,7 @@ legend {
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .title-name::before {
   content: "\f16d";
   font-family: "Line Awesome Brands";
-  font-size: 18px;
+  font-size: 20px;
 }
 .overview-phone .phone-wrap .phone-case .content-insta .box-01 .insta-img,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .insta-img {
@@ -621,8 +741,8 @@ legend {
 .overview-phone .phone-wrap .phone-case .content-insta .box-01 .insta-img img,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .insta-img img {
   display: block;
-  width: 183px;
-  height: 183px;
+  width: 235px;
+  height: 235px;
 }
 .overview-phone .phone-wrap .phone-case .content-insta .box-01 .icon-box,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .icon-box {
@@ -642,14 +762,14 @@ legend {
 }
 .overview-phone .phone-wrap .phone-case .content-insta .box-01 .tag .tag-txt,
 .overview-phone .phone-wrap .phone-case .content-insta .box-02 .tag .tag-txt {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .content-sale {
   display: block;
   width: 100%;
-  height: 1000px;
+  height: 1030px;
   background-color: #f8f3ec;
 }
 .content-sale .swiper {
@@ -752,7 +872,7 @@ legend {
 .content-sale .swiper-pagination-bullets.swiper-pagination-horizontal,
 .content-sale .swiper-pagination-custom,
 .content-sale .swiper-pagination-fraction {
-  bottom: var(--swiper-pagination-bottom, 110px);
+  bottom: var(--swiper-pagination-bottom, 90px);
 }
 .content-sale .btn-review {
   display: flex;
@@ -763,7 +883,7 @@ legend {
   background-color: #ff480a;
   border-radius: 20px;
   position: absolute;
-  bottom: 40px;
+  bottom: 10px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 100;
@@ -777,7 +897,7 @@ legend {
 .content-news-datatalk {
   display: block;
   width: 100%;
-  height: 2320px;
+  height: 2280px;
   background-color: #f8f3ec;
   z-index: 1000;
   position: relative;
@@ -827,7 +947,7 @@ legend {
 .content-news-datatalk .datatalk-list .swiper .swiper-wrapper .swiper-slide {
   position: relative;
   height: 100%;
-  width: 380px;
+  width: 100%;
   display: block;
 }
 .content-news-datatalk .datatalk-list .swiper .swiper-wrapper .swiper-slide a {
