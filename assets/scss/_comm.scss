@@ -623,7 +623,7 @@
     .overview-phone {
         .phone-wrap {
             .text-box {
-                left: 550px;
+                left: 55%;
                 top: 370px;
                 .title-box {
                     padding-bottom: 50px;
@@ -634,8 +634,13 @@
                 }
             }
             .btn-review {
-                width: 158px;
-                height: 40px;
+                width: 222px;
+                height: 56px;
+                bottom: 40px;
+                border-radius: 30px;
+                .review-txt {
+                    font-size: 18px;
+                }
             }
             .phone-case {
                 bottom: 0px;
@@ -840,7 +845,7 @@
 }
 @media screen and (min-width: $breakpoint-lg) {
     .content-sale {
-        height: 1230px;
+        height: 1150px;
         padding: 0 40px;
         .text-box {
             padding: 150px 40px 40px;
@@ -852,21 +857,69 @@
             }
         }
         .boxarea {
-            display: flex;
+            position: relative;
+            display: table;
+            table-layout: fixed;
+            border-collapse: collapse;
+            vertical-align: middle;
+            width: 100%;
+            margin-top: 60px;
+            background-color: $white;
+            .box-tr {
+                display: table-row;
+                .box-td {
+                    display: table-cell;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                    border: 1px solid #dedede;
+                    a {
+                        .img {
+                            display: block;
+                            text-align: center;
+                            max-width: 231px;
+                            height: 231px;
+                            max-height: 231px;
+                            overflow: hidden;
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+                        .txt {
+                            display: block;
+                            color: $primary;
+                            font-size: 15px;
+                            font-weight: 700;
+                            text-align: left;
+                            padding: 10px 15px 2px;
+                        }
+                        .tit {
+                            display: block;
+                            font-size: 20px;
+                            font-weight: 700;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: left;
+                            padding: 0 15px 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-review {
+            width: 222px;
+            height: 56px;
+            bottom: 40px;
+            border-radius: 30px;
+            .review-txt {
+                font-size: 18px;
+            }
         }
         .swiper-wrapper {
             display: none;
         }
-
-        .swiper-horizontal > .swiper-pagination-bullets,
-        .swiper-pagination-bullets.swiper-pagination-horizontal,
-        .swiper-pagination-custom,
-        .swiper-pagination-fraction {
-            bottom: var(--swiper-pagination-bottom, 80px);
-        }
-        .btn-review {
-            width: 158px;
-            height: 40px;
+        .swiper-pagination {
+            display: none;
         }
     }
 }
@@ -874,162 +927,327 @@
 .content-news-datatalk {
     display: block;
     width: 100%;
-    height: 2280px;
+    height: 100vh;
     background-color: $secondary;
     z-index: 1000;
     position: relative;
     overflow: hidden;
-    .container {
-        display: block;
-        width: 100%;
-        padding: 100px 24px 50px;
-        z-index: 1;
-        .top-text {
-            display: block;
-            font-size: 32px;
-            font-weight: 700;
-            padding-bottom: 25px;
-            strong {
-                color: $primary;
-            }
-        }
-        .bottom-text {
-            font-size: 16px;
-            font-weight: 700;
-        }
-    }
-    .datatalk-list {
-        position: relative;
-        max-width: 1440px;
-        height: auto;
-        margin: 0 auto;
-        transform: translateX(0);
-        padding: 0 24px;
-
-        .swiper {
-            margin-top: 40px;
-            overflow: visible;
-            .swiper-wrapper {
-                position: relative;
+    .sec-type1 {
+        padding: 50px 0;
+        .container {
+            padding: 0 30px;
+            width: 100%;
+            transition: all 0.3s;
+            .sec-title {
+                display: block;
                 width: 100%;
-                height: 100%;
+                padding: 100px 24px 50px;
                 z-index: 1;
-                display: flex;
-                transition-property: transform;
-                flex-direction: column;
-                gap: 30px;
-                .swiper-slide {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
+                .top-text {
                     display: block;
-                    a {
-                        position: relative;
-                        display: block;
-                        padding: 0 0 15px 0;
-                        border-bottom: 1px solid $primary;
-                        overflow: hidden;
-                        &::after {
-                            content: '\f062';
-                            font-family: 'Line Awesome Free';
-                            font-weight: 900;
-                            display: block;
-                            position: absolute;
-                            bottom: 18px;
-                            right: 8px;
-                            width: 24px;
-                            height: 24px;
-                            font-size: 24px;
-                            transform: rotate(45deg);
-                        }
-                        .image {
+                    font-size: 32px;
+                    font-weight: 700;
+                    padding-bottom: 25px;
+                    strong {
+                        color: $primary;
+                    }
+                }
+                .bottom-text {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+            .slide-eft {
+                position: relative;
+                .swiper {
+                    display: block;
+                    overflow: visible;
+                    width: 85%;
+                    height: 100%;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            margin-right: 24px;
                             position: relative;
-                            overflow: hidden;
-                            padding-top: 87.7%;
-                            border-radius: 10px;
-                            display: block;
-                            height: auto;
-                            img {
-                                width: 100%;
-                                height: auto;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                            }
-                        }
-                        .tit {
-                            display: block;
+                            height: 100%;
                             width: 100%;
-                            font-size: 20px;
-                            font-weight: 700;
-                            padding-top: 24px;
-                        }
-                        .talkpick {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            font-size: 14px;
-                            font-weight: 700;
-                            color: $primary;
-                            gap: 5px;
-                            padding-top: 15px;
-                            span {
-                                display: flex;
-                                align-items: center;
-                                gap: 5px;
+                            display: block;
+                            a {
+                                position: relative;
+                                display: block;
+                                padding: 0 0 15px 0;
+                                border-bottom: 1px solid $primary;
+                                overflow: hidden;
+                                transition: transform 0.3s ease-in-out;
                                 &::after {
-                                    content: '';
+                                    content: '\f062';
+                                    font-family: 'Line Awesome Free';
+                                    font-weight: 900;
                                     display: block;
-                                    height: 12px;
-                                    width: 1px;
-                                    background-color: $primary;
+                                    position: absolute;
+                                    bottom: 18px;
+                                    right: 8px;
+                                    width: 24px;
+                                    height: 24px;
+                                    font-size: 24px;
+                                    transform: rotate(45deg);
                                 }
-                                &:last-child::after {
-                                    display: none;
+                                .image {
+                                    position: relative;
+                                    overflow: hidden;
+                                    padding-top: 87.7%;
+                                    border-radius: 10px;
+                                    display: block;
+                                    height: 455px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        object-fit: cover;
+                                        object-position: center;
+                                        transition: transform 0.3s ease-in-out;
+                                    }
+                                }
+                                .tit {
+                                    display: block;
+                                    width: 100%;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    padding-top: 24px;
+                                }
+                                .talkpick {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: $primary;
+                                    gap: 5px;
+                                    padding-top: 15px;
+                                    span {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+                                        &::after {
+                                            content: '';
+                                            display: block;
+                                            height: 12px;
+                                            width: 1px;
+                                            background-color: $primary;
+                                        }
+                                        &:last-child::after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .date {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    color: $gray-600;
+                                    padding-top: 10px;
+                                }
+                                &:hover {
+                                    img {
+                                        transform: scale(1.1);
+                                    }
                                 }
                             }
-                        }
-                        .date {
-                            font-size: 13px;
-                            font-weight: 500;
-                            color: $gray-600;
-                            padding-top: 10px;
+
+                            &:nth-child(odd) {
+                                a {
+                                    .image {
+                                        height: 300px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                .swiper-slide:nth-child(odd) a .image img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
+                .swiper-button-next,
+                .swiper-rtl .swiper-button-prev {
+                    right: var(--swiper-navigation-sides-offset, 30px);
+                    top: -14%;
+                    display: flex;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 5px;
+                    background-color: $primary;
+                    &::after {
+                        color: $white;
+                        font-size: 15px;
+                    }
+                }
+                .swiper-button-prev,
+                .swiper-rtl .swiper-button-next {
+                    left: auto;
+                    right: var(--swiper-navigation-sides-offset, 72px);
+                    top: -14%;
+                    display: flex;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 5px;
+                    background-color: $primary;
+                    &::after {
+                        color: $white;
+                        font-size: 15px;
+                    }
                 }
             }
         }
     }
-}
-@media screen and (min-width: $breakpoint-md) {
-    .content-news-datatalk {
-        height: 3240px;
-        .container {
-            padding: 100px 40px 50px;
-            .top-text {
-                font-size: 40px;
-                padding-bottom: 25px;
-                br {
-                    display: none;
-                }
-            }
-            .bottom-text {
-                font-size: 18px;
-            }
-        }
-        .datatalk-list {
-            padding: 0 40px;
-        }
-    }
-}
+    // .container {
+    //     display: block;
+    //     width: 100%;
+    //     padding: 100px 24px 50px;
+    //     z-index: 1;
+    //     .top-text {
+    //         display: block;
+    //         font-size: 32px;
+    //         font-weight: 700;
+    //         padding-bottom: 25px;
+    //         strong {
+    //             color: $primary;
+    //         }
+    //     }
+    //     .bottom-text {
+    //         font-size: 16px;
+    //         font-weight: 700;
+    //     }
+    // }
+    // .datatalk-list {
+    //     position: relative;
+    //     max-width: 1440px;
+    //     height: auto;
+    //     margin: 0 auto;
+    //     transform: translateX(0);
+    //     padding: 0 24px;
 
-.content-nexs {
+    //     .swiper {
+    //         margin-top: 40px;
+    //         overflow: visible;
+    //         .swiper-wrapper {
+    //             position: relative;
+    //             width: 100%;
+    //             height: 100%;
+    //             z-index: 1;
+    //             display: flex;
+    //             transition-property: transform;
+    //             flex-direction: column;
+    //             gap: 30px;
+    //             .swiper-slide {
+    //                 position: relative;
+    //                 height: 100%;
+    //                 width: 100%;
+    //                 display: block;
+    //                 a {
+    //                     position: relative;
+    //                     display: block;
+    //                     padding: 0 0 15px 0;
+    //                     border-bottom: 1px solid $primary;
+    //                     overflow: hidden;
+    //                     &::after {
+    //                         content: '\f062';
+    //                         font-family: 'Line Awesome Free';
+    //                         font-weight: 900;
+    //                         display: block;
+    //                         position: absolute;
+    //                         bottom: 18px;
+    //                         right: 8px;
+    //                         width: 24px;
+    //                         height: 24px;
+    //                         font-size: 24px;
+    //                         transform: rotate(45deg);
+    //                     }
+    //                     .image {
+    //                         position: relative;
+    //                         overflow: hidden;
+    //                         padding-top: 87.7%;
+    //                         border-radius: 10px;
+    //                         display: block;
+    //                         height: auto;
+    //                         img {
+    //                             width: 100%;
+    //                             height: auto;
+    //                             position: absolute;
+    //                             top: 0;
+    //                             left: 0;
+    //                         }
+    //                     }
+    //                     .tit {
+    //                         display: block;
+    //                         width: 100%;
+    //                         font-size: 20px;
+    //                         font-weight: 700;
+    //                         padding-top: 24px;
+    //                     }
+    //                     .talkpick {
+    //                         display: flex;
+    //                         flex-direction: row;
+    //                         align-items: center;
+    //                         font-size: 14px;
+    //                         font-weight: 700;
+    //                         color: $primary;
+    //                         gap: 5px;
+    //                         padding-top: 15px;
+    //                         span {
+    //                             display: flex;
+    //                             align-items: center;
+    //                             gap: 5px;
+    //                             &::after {
+    //                                 content: '';
+    //                                 display: block;
+    //                                 height: 12px;
+    //                                 width: 1px;
+    //                                 background-color: $primary;
+    //                             }
+    //                             &:last-child::after {
+    //                                 display: none;
+    //                             }
+    //                         }
+    //                     }
+    //                     .date {
+    //                         font-size: 13px;
+    //                         font-weight: 500;
+    //                         color: $gray-600;
+    //                         padding-top: 10px;
+    //                     }
+    //                 }
+    //             }
+    //             .swiper-slide:nth-child(odd) a .image img {
+    //                 position: absolute;
+    //                 top: 0;
+    //                 left: 0;
+    //                 height: 100%;
+    //             }
+    //         }
+    //     }
+
+    // }
+}
+// @media screen and (min-width: $breakpoint-md) {
+//     .content-news-datatalk {
+//         height: 3240px;
+//         .container {
+//             padding: 100px 40px 50px;
+//             .top-text {
+//                 font-size: 40px;
+//                 padding-bottom: 25px;
+//                 br {
+//                     display: none;
+//                 }
+//             }
+//             .bottom-text {
+//                 font-size: 18px;
+//             }
+//         }
+//         .datatalk-list {
+//             padding: 0 40px;
+//         }
+//     }
+// }
+
+.content-news {
     display: block;
     z-index: 1000;
     width: 100%;
@@ -1076,6 +1294,7 @@
         height: auto;
         padding: 0 24px;
         gap: 20px;
+        position: relative;
         &::after {
             content: '';
             display: block;
@@ -1118,14 +1337,6 @@
                     }
                 }
             }
-            .la-arrow-circle-right {
-                display: block;
-                width: 40px;
-                height: 40px;
-                color: $primary;
-                font-size: 40px;
-                opacity: 0;
-            }
         }
         &:hover {
             &::after {
@@ -1141,10 +1352,22 @@
                 transition: opacity 0.3s ease;
             }
         }
+        .la-arrow-circle-right {
+            display: block;
+            width: 40px;
+            height: 40px;
+            color: $primary;
+            font-size: 40px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            transform: translate(0%, -50%);
+        }
     }
 }
 @media screen and (min-width: $breakpoint-md) {
-    .content-nexs {
+    .content-news {
         .container {
             padding: 120px 40px 10px;
             .top-text {
@@ -1153,6 +1376,40 @@
         }
         .news-list {
             padding: 0 100px;
+            .la-arrow-circle-right {
+                top: 50%;
+                right: 100px;
+                transform: translate(0%, -50%);
+            }
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-lg) {
+    .content-news {
+        .container {
+            padding: 120px 60px 10px;
+        }
+        .news-list {
+            padding: 0 100px;
+            .news-list-container {
+                .news-box {
+                    width: 47px;
+                    height: 32px;
+                    .news-text {
+                        font-size: 14px;
+                    }
+                }
+                .news-text-wrap {
+                    .title {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .la-arrow-circle-right {
+                top: 50%;
+                right: 100px;
+                transform: translate(0%, -50%);
+            }
         }
     }
 }
@@ -1214,11 +1471,41 @@
     }
 }
 @media screen and (min-width: $breakpoint-md) {
-    .copyright {
-        p {
-            br {
-                display: none;
+    #footer {
+        padding: 0 40px;
+        .copyright {
+            p {
+                br {
+                    display: none;
+                }
             }
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-lg) {
+    #footer {
+        padding: 0 60px;
+        position: relative;
+        .top-content {
+            padding: 82px 0 0;
+            .logo {
+                img {
+                    height: 50px;
+                }
+            }
+        }
+        .nav {
+            font-weight: 700;
+            display: flex;
+            gap: 3px;
+            position: absolute;
+            top: 90px;
+            left: 250px;
+        }
+        .copyright {
+            position: absolute;
+            top: 117px;
+            left: 250px;
         }
     }
 }
