@@ -1255,6 +1255,9 @@ legend {
   color: #757575;
   padding-top: 10px;
 }
+.content-news-datatalk .sec-type1 .container .slide-eft .swiper .swiper-wrapper .swiper-slide a:hover {
+  text-decoration: none;
+}
 .content-news-datatalk .sec-type1 .container .slide-eft .swiper .swiper-wrapper .swiper-slide a:hover img {
   transform: scale(1.1);
 }
